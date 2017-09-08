@@ -1,0 +1,24 @@
+{
+  "name": "myrecteam",
+  "version": "1.0.0",
+  "description": "Application for recreation department league management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trr88/MyRecTeam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trr88/MyRecTeam/issues"
+  },
+  "homepage": "https://github.com/trr88/MyRecTeam#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mysql": "^2.14.1",
+    "sequelize": "^4.8.2"
+  }
+}
