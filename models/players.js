@@ -40,4 +40,4 @@ module.exports = function(sequelize, Sequelize) {
 		Players.belongsTo(models.Teams);
 	}
 	return Players;
-}
+};
