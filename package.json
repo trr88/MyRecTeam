@@ -18,15 +18,25 @@
   "homepage": "https://github.com/trr88/MyRecTeam#readme",
   "dependencies": {
     "babel": "^6.23.0",
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.18.1",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
+<<<<<<< HEAD
     "google-auth-library": "^0.11.0",
     "googleapis": "^21.3.0",
+=======
+    "express-session": "^1.15.5",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
+>>>>>>> 57df1cb74eae34de65ea32f874e37fc7acda8ee1
     "mysql": "^2.14.1",
+    "mysql2": "^1.4.2",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "path": "^0.12.7",
     "sequelize": "^4.8.2",
+    "serve-favicon": "^2.4.4",
     "webpack": "^3.5.6"
   }
 }
