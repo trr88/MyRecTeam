@@ -9,6 +9,7 @@ module.exports = function(sequelize, Sequelize) {
 	});
 	League.associate = function(models) {
 		League.hasMany(models.Teams);
+		League.hasMany(models.Players);
 	}
 	return League;
 };
