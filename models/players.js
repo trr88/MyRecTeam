@@ -38,6 +38,7 @@ module.exports = function(sequelize, Sequelize) {
 	});
 	Players.associate = function(models) {
 		Players.belongsTo(models.Teams);
+		Players.belongsTo(models.League);
 	}
 	return Players;
 };
