@@ -10,6 +10,22 @@ h1, h2, h3, h4 {
 	background-color: #e37222;
 }
 
+.jumbotron {
+	margin-bottom: 0px;
+    opacity: 0.2;
+    color: #fff;
+    background: #000 url("sport.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+  
+  
+  position:absolute;
+  top:0;left:0;
+  z-index:1;
+}
+
 
 .navbar-default .navbar-brand {
     color: white;
@@ -22,4 +38,11 @@ h1, h2, h3, h4 {
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: white;
     background-color: #303c6c;
+}
+
+
+.jumbotron {position:relative;padding:50px;}
+.jumbotron .container {z-index:2;
+ position:relative;
+  z-index:2;
 }
