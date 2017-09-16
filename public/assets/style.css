@@ -23,6 +23,7 @@ h1, h2, h3, h4 {
     color: white;
     background-color: #303c6c;
 }
+
 .jumbotron{
 	background-color: white;
 	background-image: url(./images/sport-equipment-2-22802518.png);
@@ -34,4 +35,5 @@ h1, h2, h3, h4 {
 
 h3{
 	line-height: 130%;
+
 }
