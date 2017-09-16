@@ -1,10 +1,18 @@
 body {
 	font-family: 'Open Sans', sans-serif;
+	
+	background-image: url(./images/crossword.png);
 }
 
+.frontContainer {
+	background-color: rgba(227, 114, 34, 0.7);
+	padding: 10px 15px 15px 20px;
+
+}
 h1, h2, h3, h4 {
 	font-family: 'Droid Sans', sans-serif;
 }
+
 
 .navbar {
 	background-color: #e37222;
@@ -25,12 +33,19 @@ h1, h2, h3, h4 {
 }
 .jumbotron{
 	background-color: white;
-	background-image: url(./images/sport-equipment-2-22802518.png);
-    opacity: 0.5;
-    color: white;
+
+
+	background-image: 
+    linear-gradient(
+      rgba(200, 200, 200, 0.4),
+      rgba(200, 200, 200, 0.4)
+    ),
+    url(./images/sport-equipment-2-22802518.png);
     text-align: center;
+    color: white;
 	
 } 
+
 
 h3{
 	line-height: 130%;
