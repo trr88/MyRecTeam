@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calendar</title>
+
+	<link rel='stylesheet' href='assets/css/fullcalendar.css' />
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/moment@2.18.1/moment.min.js'></script>
+	<script src='assets/js/fullcalendar.js'></script>
+
+</head>
+<body>
+
+<div id="calendar"></div>
+
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+		var eventsArray = [ {
+            title: 'All Day Event',
+            start: '2017-09-08'
+        }, {
+            title: 'Long Event',
+            start: '2017-09-11',
+            end: '2017-09-19'
+        }, {
+            title: 'Click for Google',
+            url: 'http://google.com/',
+            start: '2017-09-19'
+
+        },{
+            title: 'Click for Sports',
+            url: 'http://espn.com/',
+            start: '2017-09-19'
+
+        },{
+            title: 'Fun to play Baseball game',
+            start: '2017-09-19T12:00:00+13:00'
+
+        },{
+            title: 'Play Sports',
+            start: '2017-09-19'
+
+        },{
+            title: 'Practice Soccers',
+            start: '2017-09-19T13:00:00+14:00'
+
+        },{
+            title: 'Teams Soccers Vs Teams Soccers',
+            start: '2017-09-19T16:00:00+18:00'
+
+        },{
+            title: 'Meetings ',
+            start: '2017-09-19T18:00:00+20:00'
+
+        },{
+            title: 'Practice Morning ',
+            start: '2017-09-19T09:00:00+11:00'
+
+        }];
+
+		$('#calendar').fullCalendar({
+        defaultDate: '2017-09-18',
+        header: {
+            left: 'prev',
+            center: ' title ',
+            right: ' next '
+        },
+        events: eventsArray,
+        eventLimit: true, // allow "more" link when too many events
+        views: {
+            day: {
+                eventLimit: 6 // adjust to 6 only for agendaWeek/agendaDay
+            }
+        },
+        editable: true,
+		eventColor: '#303c6c',        
+
+    });
+});
+
+</script>
+</body>
+</html>
