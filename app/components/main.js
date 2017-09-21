@@ -38,7 +38,7 @@ var Main = React.createClass({
         </div>
 
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-2 side-menu">
             <div className="row-offcanvas row-offcanvas-left">
               <div id="sidebar" className="sidebar-offcanvas">
                 <ul className="nav nav-pills nav-stacked">
