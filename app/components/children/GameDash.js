@@ -34,7 +34,7 @@ var GameDash = React.createClass({
                         <span className="caret"></span>
                       </button>
                       <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">list of team names</a></li>
+                        <li>list of team names</li>
                       </ul>
                     </div>
                     <br />
@@ -44,7 +44,7 @@ var GameDash = React.createClass({
                         <span className="caret"></span>
                       </button>
                       <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">list of team names</a></li>
+                        <li>list of team names</li>
                       </ul>
                     </div> 
                     <br />                   
