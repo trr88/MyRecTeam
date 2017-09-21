@@ -1,5 +1,6 @@
 var React = require("react");
 var Link = require("react-router").Link;
+var Calendar = require("../children/grandchildren/Calendar.js");
 
 var GameDash = React.createClass({
   render: function() {
@@ -14,6 +15,7 @@ var GameDash = React.createClass({
           </div>
           <div className="panel-body">
             <p>Will eventually hold the Calendar.</p>
+            <div><Calendar /></div>
           </div>
         </div>
       </div>
