@@ -1,5 +1,6 @@
 var React = require("react");
 var Link = require("react-router").Link;
+var Calendar = require("../children/grandchildren/Calendar.js");
 
 var GameDash = React.createClass({
   render: function() {
@@ -10,10 +11,10 @@ var GameDash = React.createClass({
       <div className="col-md-8">
         <div className="panel panel-default">
           <div className="panel-heading">
-            <h3 className="panel-title">Calendar Panel</h3>
+            <h3 className="panel-title">Upcoming Games</h3>
           </div>
           <div className="panel-body">
-            <p>Will eventually hold the Calendar.</p>
+            <div><Calendar /></div>
           </div>
         </div>
       </div>
@@ -22,36 +23,32 @@ var GameDash = React.createClass({
             <div className="row">
             <div className="panel panel-default">
               <div className="panel-heading">
-                <h3 className="panel-title">Game Form</h3>
+                <h3 className="panel-title">Schedule a Game</h3>
               </div>
               <div className="panel-body">
                 <form>
                   <div className="form-group">
-                    <label className="">First Name</label>
-                    <input type="text" className="form-control text-center" id="firstName" onChange= {this.handleChange} required/>
+                    <div className="dropdown">
+                      <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Select First Team
+                        <span className="caret"></span>
+                      </button>
+                      <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">list of team names</a></li>
+                      </ul>
+                    </div>
                     <br />
-
-                    <label className="">Last Name</label>
-                    <input type="text" className="form-control text-center" id="lastName" onChange= {this.handleChange} required/>
-                    <br />
-
-                    <label className="">Age</label>
-                    <input type="text" className="form-control text-center" id="age" onChange= {this.handleChange} required/>
-                    <br />
-
-                    <label className="">Parent or Guardian Name</label>
-                    <input type="text" className="form-control text-center" id="parentGuardian" onChange= {this.handleChange} required/>
-                    <br />
-
-                    <label className="">Phone Number</label>
-                    <input type="text" className="form-control text-center" id="phone" onChange= {this.handleChange} required/>
-                    <br />
-
-                    <label className="">E-mail</label>
-                    <input type="text" className="form-control text-center" id="email" onChange= {this.handleChange} required/>
-                    <br />
-                    
-                    <button type="button" className="btn btn-primary" onClick={this.handleClick}>Submit</button>
+                    <div className="dropdown">
+                      <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Select Second Team
+                        <span className="caret"></span>
+                      </button>
+                      <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">list of team names</a></li>
+                      </ul>
+                    </div> 
+                    <br />                   
+                    <button type="button" className="btn btn-primary" onClick={this.handleClick}>Create Game</button>
                   </div>
                 </form>
               </div>

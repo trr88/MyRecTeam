@@ -1,7 +1,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	
-	background-image: url(./images/crossword.png);
+	background-image: url(../images/crossword.png);
 }
 
 .frontContainer {
@@ -20,15 +20,15 @@ h1, h2, h3, h4 {
 
 
 .navbar-default .navbar-brand {
-    color: white;
+    color: #f7f7f7;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: white;
+    color: #f7f7f7;
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    color: white;
+    color: #f7f7f7;
     background-color: #303c6c;
 }
 
@@ -51,4 +51,22 @@ h1, h2, h3, h4 {
 h3{
 	line-height: 130%;
 
+}
+
+.nav>li>a:hover {
+    color: #303c6c;
+    background-color: #f7f7f7;
+}
+
+a {
+	color: #f7f7f7;
+}
+
+.nav-pills>li>a {
+    border-radius: 0;
+}
+
+.nav-stacked {
+	height: 850px;
+	background-color: #303c6c;
 }
