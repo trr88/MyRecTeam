@@ -24,13 +24,20 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.STRING,
 			notEmpty: true
 		},
-		streetNumber: {
-			type: Sequelize.INTEGER,
-			allowNull: false
-		},
-		streetName: {
+		address: {
 			type: Sequelize.STRING,
+			isAlphanumeric: true,
 			notEmpty: true
+		},
+		state: {
+			type: Sequelize.STRING,
+			notEmpty: true,
+			len: [2,2]
+		},
+		zipCode: {
+			type: Sequelize.INTEGER,
+			allowNull: false,
+			len: [5,5]
 		}
 	});
 	Games.associate = function(models) {
