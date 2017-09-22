@@ -1,4 +1,5 @@
 'use strict';
+var Sequelize = require("sequelize");
 
 module.exports = function(sequelize, Sequelize) {
 	var Games = sequelize.define("Games", {
@@ -11,12 +12,12 @@ module.exports = function(sequelize, Sequelize) {
 			allowNull: false
 		},
 		start: {
-			type: Sequelize.Date,
+			type: Sequelize.DATE,
 			allowNull: false,
 			isDate: true
 		},
 		end: {
-			type: Sequelize.Date,
+			type: Sequelize.DATE,
 			allowNull: false,
 			isDate: true
 		},

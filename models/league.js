@@ -1,4 +1,5 @@
 'use strict';
+var Sequelize = require("sequelize");
 
 module.exports = function(sequelize, Sequelize) {
 	var League = sequelize.define("League", {
