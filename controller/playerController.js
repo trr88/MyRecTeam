@@ -1,7 +1,7 @@
 var models = require('../models');
 var Teams = models.teams;
 
-var expres = require("express");
+var express = require("express");
 var router = express.Router();
 
 var Players = require("../models/players.js");

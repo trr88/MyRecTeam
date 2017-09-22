@@ -1,4 +1,5 @@
 'use strict';
+var Sequelize = require("sequelize");
 
 module.exports = function(sequelize, Sequelize) {
 	var Games = sequelize.define("Games", {
@@ -11,12 +12,12 @@ module.exports = function(sequelize, Sequelize) {
 			allowNull: false
 		},
 		start: {
-			type: Sequelize.Date,
+			type: Sequelize.DATE,
 			allowNull: false,
 			isDate: true
 		},
 		end: {
-			type: Sequelize.Date,
+			type: Sequelize.DATE,
 			allowNull: false,
 			isDate: true
 		},
@@ -24,13 +25,20 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.STRING,
 			notEmpty: true
 		},
-		streetNumber: {
-			type: Sequelize.INTEGER,
-			allowNull: false
-		},
-		streetName: {
+		address: {
 			type: Sequelize.STRING,
+			isAlphanumeric: true,
 			notEmpty: true
+		},
+		state: {
+			type: Sequelize.STRING,
+			notEmpty: true,
+			len: [2,2]
+		},
+		zipCode: {
+			type: Sequelize.INTEGER,
+			allowNull: false,
+			len: [5,5]
 		}
 	});
 	Games.associate = function(models) {
