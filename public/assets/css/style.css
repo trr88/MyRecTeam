@@ -1,3 +1,8 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	
@@ -69,4 +74,8 @@ a {
 .nav-stacked {
 	height: 850px;
 	background-color: #303c6c;
+}
+
+.form-panel {
+	margin-right: 10px;
 }
