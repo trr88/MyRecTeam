@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	
+	background-image: url(../images/crossword.png);
+}
+
+.frontContainer {
+	background-color: rgba(227, 114, 34, 0.7);
+	padding: 10px 15px 15px 20px;
+
+}
+h1, h2, h3, h4 {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+
+.navbar {
+	background-color: #e37222;
+}
+
+
+.navbar-default .navbar-brand {
+    color: #f7f7f7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #f7f7f7;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #f7f7f7;
+    background-color: #303c6c;
+}
+
+.jumbotron{
+	background-color: white;
+
+
+	background-image: 
+    linear-gradient(
+      rgba(200, 200, 200, 0.4),
+      rgba(200, 200, 200, 0.4)
+    ),
+    url(../images/sport-equipment-2-22802518.png);
+    text-align: center;
+    color: white;
+	
+} 
+
+
+h3{
+	line-height: 130%;
+
+}
+
+.nav>li>a:hover {
+    color: #303c6c;
+    background-color: #f7f7f7;
+}
+
+a {
+	color: #f7f7f7;
+}
+
+.nav-pills>li>a {
+    border-radius: 0;
+}
+
+.nav-stacked {
+	height: 850px;
+	background-color: #303c6c;
+}
+
+.form-panel {
+	margin-right: 10px;
+}
