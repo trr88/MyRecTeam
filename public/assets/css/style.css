@@ -1,8 +1,3 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-}
-
 body {
 	font-family: 'Open Sans', sans-serif;
 	
@@ -12,13 +7,28 @@ body {
 .frontContainer {
 	background-color: rgba(227, 114, 34, 0.7);
 	padding: 10px 15px 15px 20px;
+   
 
+}
+.sidebar-offcanvas{
+    box-shadow: 5px 5px 5px #D3D3D3;
+}
+
+.mainContainer{
+    box-shadow: 5px 5px 5px #D3D3D3;
 }
 h1, h2, h3, h4 {
 	font-family: 'Droid Sans', sans-serif;
 }
 
+.defaultShadow{
+     box-shadow: 3px 3px 5px  #D3D3D3;
 
+}
+
+form.horizontal{
+	background-image: url(../images/crossword.png);
+}
 .navbar {
 	background-color: #e37222;
 }
@@ -39,8 +49,6 @@ h1, h2, h3, h4 {
 
 .jumbotron{
 	background-color: white;
-
-
 	background-image: 
     linear-gradient(
       rgba(200, 200, 200, 0.4),
@@ -52,12 +60,41 @@ h1, h2, h3, h4 {
 	
 } 
 
+.mainContainer{
+    background-image: url(../images/crossword.png);
+}
+
+.panel-default {
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #303c6c;
+    border-color: #303c6c;
+}
+
+.panel-body{
+	background-image: url(../images/crossword.png);
+}
+
+ label.col-sm-2.control-label{
+ 	font-size: 14px;
+ }
 
 h3{
 	line-height: 130%;
-
 }
 
+h3.panel-title{
+	font-size: 24px;
+    color: #f7f7f7;
+}
+ h3.frontContainer{
+    color: ;
+ }
 .nav>li>a:hover {
     color: #303c6c;
     background-color: #f7f7f7;
@@ -74,8 +111,7 @@ a {
 .nav-stacked {
 	height: 850px;
 	background-color: #303c6c;
-}
+	font-size: 20px;
+	padding: 25px 5px 25px 5px;
 
-.form-panel {
-	margin-right: 10px;
 }
