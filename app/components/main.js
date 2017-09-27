@@ -7,7 +7,7 @@ var Main = React.createClass({
 
     return (
 
-      <div className="container-fluid">
+      <div className="container-fluid defaultShadow">
         <div className="row">
         <nav className="navbar navbar-default">
             <div className="container-fluid">
