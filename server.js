@@ -26,13 +26,27 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+passport.serializeUser(function(user, done) {
+  done(null, user._id);
+});
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
 app.use(express.static("./public"));
 
-require("./routes")(app);
 require("./routes/auth.js")(app, passport);
+require("./routes/games.js")(app, db);
+require("./routes/league.js")(app, db);
+require("./routes/players.js")(app, db);
+require("./routes/teams.js")(app, db);
+require("./routes/user.js")(app, db);
 
 
-db.sequelize.sync().then(function() {
+
+db.sequelize.sync({force: true}).then(function() {
 	app.listen(PORT, function() {
 		console.log("App listening on PORT " + PORT)
 	});

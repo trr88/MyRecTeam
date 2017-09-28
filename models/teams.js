@@ -3,27 +3,27 @@ var Sequelize = require("sequelize");
 
 module.exports = function(sequelize, Sequelize){
 	var Teams = sequelize.define("Teams", {
-		teams_name: {
+		teamsName: {
 			type: Sequelize.STRING,
 			allowNull: false,
 			len: [1]
 		},
-		coach_firstname: {
+		coachFirstName: {
 			type: Sequelize.STRING,
 			allowNull: false,
 			len: [1]
 		},
-		coach_lastname: {
+		coachLastName: {
 			type: Sequelize.STRING,
 			allowNull: false,
 			len: [1]
 		},
-		coach_phone: {
+		coachPhone: {
 			type: Sequelize.INTEGER,
 			allowNull: false,
 			len: [10, 10]
 		},
-		coach_email: {
+		coachEmail: {
 			type: Sequelize.STRING,
 			allowNull: false,
 			len: [1]
