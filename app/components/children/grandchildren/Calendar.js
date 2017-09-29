@@ -1,26 +1,18 @@
 var React = require("react");
 var Link = require("react-router").Link;
 var FullCalendar = require("fullcalendar");
-var $ = require("jquery");
+var jQuery = require("jquery");
+// var Modal = require("react-modal");
 var Moment = require("moment");
 
 var eventsArray = [ {
             title: 'All Day Event',
-            start: '2017-09-08'
+            start: '2017-09-08' 
         }, {
             title: 'Long Event',
             start: '2017-09-11',
-            end: '2017-09-16'
-        }, {
-            title: 'Click for Google',
-            url: 'http://google.com/',
-            start: '2017-09-19'
-
-        },{
-            title: 'Click for Sports',
-            url: 'http://espn.com/',
-            start: '2017-09-19'
-
+            end: '2017-09-19',
+            description: 'Champion Games'
         },{
             title: 'Fun to play Baseball game',
             start: '2017-09-19T12:00:00+13:00'
@@ -31,7 +23,8 @@ var eventsArray = [ {
 
         },{
             title: 'Practice Soccers',
-            start: '2017-09-19T13:00:00+14:00'
+            start: '2017-09-19T13:00:00+14:00',
+            description: 'This is a cool event'
 
         },{
             title: 'Teams Soccers Vs Teams Soccers',
@@ -50,10 +43,15 @@ var eventsArray = [ {
 var Calendar = React.createClass({
 
   render() {
-    return <div id="calendar"></div>;
+    return ( 
+        <div>
+            <div id="calendar"></div>
+        </div>
+    );
   },
   componentDidMount() {
-    $('#calendar').fullCalendar({
+
+    jQuery('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
 				center: 'title',
@@ -67,11 +65,20 @@ var Calendar = React.createClass({
             }
         },
         editable: false,
-		eventColor: '#303c6c',
-			
+		eventColor: '#303c6c'
+        // eventClick: function(event, jsEvent, view) {
+        //     // that.openModal();
+        //     code modal example from NPM till start
+        //  $('#modalTitle').html(event.title);
+        //  $('#modalBody').html(event.description);
+        //  $("#modalStart").html(moment(event.start).format('MMM Do h:mm A'));
+        //  $("#modalEnd").html(moment(event.end).format('MMM Do h:mm A'));
+        //  $('#fullCalModal').modal(); 
+        // }
     })
   }
 });
 
 module.exports = Calendar;
+
 
