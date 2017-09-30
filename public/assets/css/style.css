@@ -2,7 +2,12 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-image: url(../images/crossword.png);
     font-size: 16px;
-    line-height: 150%;
+    line-height: 125%;
+}
+.page-header{
+    color: white;
+    padding-top: 3px;
+    background: rgba(277,114,34, 0.5);
 }
 
 #landingPage {
@@ -22,6 +27,12 @@ body {
     padding: 8px;
 }
 
+.flex{
+    display: flex;
+}
+.removeBottomMargin{
+    margin-bottom: 0px;
+}
 h1, h2, h3, h4 {
 	font-family: 'Droid Sans', sans-serif;
 }
