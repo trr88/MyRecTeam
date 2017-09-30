@@ -2,7 +2,7 @@ var React = require("react");
 var Link = require("react-router").Link;
 var FullCalendar = require("fullcalendar");
 var jQuery = require("jquery");
-// var Modal = require("react-modal");
+// var Modal = require("react-bootstrap-modal");
 var Moment = require("moment");
 
 var eventsArray = [ {
