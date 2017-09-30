@@ -18,7 +18,7 @@ var Main = React.createClass({
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                    <a className="navbar-brand nav-text" href="#">MyRecTeam</a>
+                    <a className="navbar-brand nav-text dashNav" href="#">MyRecTeam</a>
                 </div>
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav navbar-right">
@@ -40,7 +40,7 @@ var Main = React.createClass({
         <div className="row">
           <div className="col-md-2 side-menu">
             <div className="row-offcanvas row-offcanvas-left">
-              <div id="sidebar" className="sidebar-offcanvas">
+              <div id="sidebar" className="defaultShadow">
                 <ul className="nav nav-pills nav-stacked">
                   <li><Link to="/GameDash">Manage Games</Link></li>
                   <li><Link to="/TeamDash">Manage Teams</Link></li>
