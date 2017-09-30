@@ -1,24 +1,39 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-}
-
 body {
 	font-family: 'Open Sans', sans-serif;
-	
 	background-image: url(../images/crossword.png);
+    font-size: 16px;
+    line-height: 150%;
 }
 
-.frontContainer {
-	background-color: rgba(227, 114, 34, 0.7);
-	padding: 10px 15px 15px 20px;
+#landingPage {
+	background-image: url(../images/football-team-1638508_1920_2.jpg);  
+    background-repeat: no-repeat;
 
 }
+.landPage{
+    margin-top:  150px;
+    padding-top: 45px; 
+}
+ .defaultOpacity{
+    background: rgba(255,255,255, 0.75);
+    color: black;
+ }
+.nav-stacked>li{
+    padding: 8px;
+}
+
 h1, h2, h3, h4 {
 	font-family: 'Droid Sans', sans-serif;
 }
 
+.defaultShadow{
+     box-shadow: 5px 5px 5px  #D3D3D3;
 
+}
+
+form.horizontal{
+	
+}
 .navbar {
 	background-color: #e37222;
 }
@@ -35,47 +50,80 @@ h1, h2, h3, h4 {
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: #f7f7f7;
     background-color: #303c6c;
+   }
+
+.navbar-collapse{
+    margin: 10px 25px 10px 25px;
 }
 
-.jumbotron{
+
+.mainContainer{
+    background-image: url(../images/crossword.png);
+}
+
+.panel-default {
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #303c6c;
+    border-color: #303c6c;
+}
+
+.panel-body{
 	background-color: white;
+}
 
 
-	background-image: 
-    linear-gradient(
-      rgba(200, 200, 200, 0.4),
-      rgba(200, 200, 200, 0.4)
-    ),
-    url(../images/sport-equipment-2-22802518.png);
-    text-align: center;
-    color: white;
-	
-} 
-
+ label.col-sm-2.control-label{
+ 	font-size: 14px;
+ }
+.dashNav{
+    padding: 25px;
+}
 
 h3{
 	line-height: 130%;
-
 }
 
-.nav>li>a:hover {
-    color: #303c6c;
-    background-color: #f7f7f7;
+h3.panel-title{
+	font-size: 20px;
+    color: #f7f7f7;
+}
+ 
+.nav>li>a:link {
+    color: white;
+    background-color: #303c6c;
+}
+.nav>li>a:active {
+    color: white;
+    background-color: #e37222;
+}
+.nav>li>a:visited {
+    color: white;
+    background-color: #7c7f8e;
 }
 
-a {
-	color: #f7f7f7;
+
+a:link{
+	color: #303c6c;
 }
 
 .nav-pills>li>a {
     border-radius: 0;
 }
 
+.defaultMargin{
+    margin: 5px 5px;
+}
 .nav-stacked {
 	height: 850px;
-	background-color: #303c6c;
-}
+    color: black;
+	background-color: white;
+	font-size: 16px;
+	padding: 25px 5px 25px 5px;
 
-.form-panel {
-	margin-right: 10px;
 }
