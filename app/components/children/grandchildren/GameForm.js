@@ -4,7 +4,7 @@ var Link = require("react-router").Link;
 var GameForm = React.createClass({
   render: function() {
     return (
-      <div className="panel panel-default form-panel">
+      <div className="panel panel-default">
         <div className="panel-heading">
           <h3 className="panel-title">Schedule a Game</h3>
         </div>

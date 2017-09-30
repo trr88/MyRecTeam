@@ -9,7 +9,7 @@ var GameDash = React.createClass({
   render: function() {
     return (
 
-      <div className="row">
+      <div className="row defaultMargin">
         <div className="col-md-8">
           <div className="panel panel-default">
             <div className="panel-heading">
