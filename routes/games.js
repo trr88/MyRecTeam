@@ -12,7 +12,7 @@ module.exports = function(app, db) {
     // GET one games by id
     app.get('/games/:id', (req, res) => {
         const id = req.params.id;
-        db.games.find({
+        db.Games.find({
                 where: { id: id }
             })
             .then(Games => {
@@ -21,7 +21,7 @@ module.exports = function(app, db) {
     });
 
     // POST single games
-    app.post('/games', (req, res) => {
+    app.post('/games/new', (req, res) => {
         const visitingTeam = req.body.visitingTeam;
         const homeTeam = req.body.homeTeam;
         const start = req.body.start;
@@ -29,14 +29,11 @@ module.exports = function(app, db) {
         const address = req.body.address;
         const state = req.body.state;
         const zipCode = req.body.zipCode;
-        db.games.create({
+        db.Games.create({
                 visitingTeam: visitingTeam,
                 homeTeam: homeTeam,
                 start: start,
-                end: end,
-                address: address,
-                state: state,
-                zipCode: zipCode
+                end: end
 
             })
             .then(newGames => {
@@ -48,7 +45,7 @@ module.exports = function(app, db) {
     app.patch('/games/:id', (req, res) => {
         const id = req.params.id;
         const updates = req.body.updates;
-        db.games.find({
+        db.Games.find({
                 where: { id: id }
             })
             .then(Games => {
@@ -62,7 +59,7 @@ module.exports = function(app, db) {
     // DELETE single games
     app.delete('/games/:id', (req, res) => {
         const id = req.params.id;
-        db.games.destroy({
+        db.Games.destroy({
                 where: { id: id }
             })
             .then(deletedGames => {
