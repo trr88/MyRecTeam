@@ -1,4 +1,5 @@
 'use strict';
+
 var faker = require('faker');
 var bCrypt = require('bcrypt-nodejs');
 
@@ -53,18 +54,35 @@ for (var i = 0; i < 10; i++) {
 }
 
 module.exports = {
-  up: function(queryInterface, Sequelize) {
-    return queryInterface.bulkInsert('Players', playerData).then(() => {
-      return queryInterface.bulkInsert('Teams',teamData).then(()=> {
-        return queryInterface.bulkInsert('Users', usersData).then(() => {
-          return queryInterface.bulkInsert('League', leagueData)
+  up: function (queryInterface, Sequelize) {
+
+    up: function(queryInterface, Sequelize) {
+    return queryInterface.bulkInsert('league', leagueData).then(() => {
+      return queryInterface.bulkInsert('teams',teamData).then(()=> {
+        return queryInterface.bulkInsert('players', playerData).then(() => {
+          return queryInterface.bulkInsert('user', usersData)
         });
       });
       });
     };
+    /*
+      Add altering commands here.
+      Return a promise to correctly handle asynchronicity.
+    
+      Example:
+      return queryInterface.bulkInsert('Person', [{
+        name: 'John Doe',
+        isBetaMember: false
+      }], {});
+    */
   },
 
-  down: function(queryInterface, Sequelize) {
+  down: function (queryInterface, Sequelize) {
+
+    return queryInterface.bulkDelete('players', null, {});
+    return queryInterface.bulkDelete('teams', null, {});
+    return queryInterface.bulkDelete('users', null, {});
+    return queryInterface.bulkDelete('league', null, {});
     /*
       Add reverting commands here.
       Return a promise to correctly handle asynchronicity.
@@ -72,9 +90,5 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
-    return queryInterface.bulkDelete('Players', null, {});
-    return queryInterface.bulkDelete('Teams', null, {});
-    return queryInterface.bulkDelete('Users', null, {});
-    return queryInterface.bulkDelete('League', null, {});
   }
 };

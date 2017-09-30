@@ -3,7 +3,7 @@
 module.exports = function(app, db) {
 
     app.get("/teams", (req, res) => {
-        db.teams.findAll()
+        db.Teams.findAll()
             .then(Teams => {
                 res.json(Teams);
             });
@@ -12,7 +12,7 @@ module.exports = function(app, db) {
     // GET one teams by id
     app.get('/teams/:id', (req, res) => {
         const id = req.params.id;
-        db.teams.find({
+        db.Teams.find({
                 where: { id: id }
             })
             .then(Teams => {
@@ -21,13 +21,13 @@ module.exports = function(app, db) {
     });
 
     // POST single teams
-    app.post('/teams', (req, res) => {
+    app.post('/teams/new', (req, res) => {
         const teamsName = req.body.teamsName;
         const coachFirstName = req.body.coachFirstName;
         const coachLastName = req.body.coachLastName;
         const coachPhone = req.body.coachPhone;
         const coachEmail = req.body.coachEmail;
-        db.teams.create({
+        db.Teams.create({
                 teamsName: teamsName,
                 coachFirstName: coachFirstName,
                 coachLastName: coachLastName,
@@ -44,7 +44,7 @@ module.exports = function(app, db) {
     app.patch('/teams/:id', (req, res) => {
         const id = req.params.id;
         const updates = req.body.updates;
-        db.teams.find({
+        db.Teams.find({
                 where: { id: id }
             })
             .then(Teams => {
@@ -58,7 +58,7 @@ module.exports = function(app, db) {
     // DELETE single teams
     app.delete('/teams/:id', (req, res) => {
         const id = req.params.id;
-        db.teams.destroy({
+        db.Teams.destroy({
                 where: { id: id }
             })
             .then(deletedTeams => {

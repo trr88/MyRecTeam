@@ -3,7 +3,7 @@
 module.exports = function(app, db) {
 
     app.get("/user", (req, res) => {
-        db.user.findAll()
+        db.User.findAll()
             .then(User => {
                 res.json(User);
             });
@@ -12,7 +12,7 @@ module.exports = function(app, db) {
     // GET one user by id
     app.get('/user/:id', (req, res) => {
         const id = req.params.id;
-        db.user.find({
+        db.User.find({
                 where: { id: id }
             })
             .then(User => {
@@ -21,12 +21,12 @@ module.exports = function(app, db) {
     });
 
     // POST single user
-    app.post('/user', (req, res) => {
+    app.post('/user/new', (req, res) => {
         const name = req.body.name;
         const email = req.body.email;
         const password = req.body.password;
 
-        db.user.create({
+        db.User.create({
                 name: name,
                 email: email,
                 password: password
@@ -40,7 +40,7 @@ module.exports = function(app, db) {
     app.patch('/user/:id', (req, res) => {
         const id = req.params.id;
         const updates = req.body.updates;
-        db.user.find({
+        db.User.find({
                 where: { id: id }
             })
             .then(User => {
@@ -54,7 +54,7 @@ module.exports = function(app, db) {
     // DELETE single user
     app.delete('/user/:id', (req, res) => {
         const id = req.params.id;
-        db.user.destroy({
+        db.User.destroy({
                 where: { id: id }
             })
             .then(deletedUser => {
