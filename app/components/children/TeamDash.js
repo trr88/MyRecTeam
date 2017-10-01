@@ -4,6 +4,7 @@ var Link = require("react-router").Link;
 var TeamForm = require("../children/grandchildren/TeamForm");
 
 var TeamDash = React.createClass({
+
   render: function() {
     return (
 
