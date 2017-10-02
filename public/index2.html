@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>MyRecTeam</title>
+      <!-- Latest compiled and minified CSS & JS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans" rel="stylesheet">
+  </head>
+  
+  <body>
+      <div id="myCarousel" class="carousel container slide">
+          <div class="carousel-inner">
+                    <div class="active item one"></div>
+                    <div class="item two"></div>
+                    <div class="item three"></div>
+          </div>
+      </div>
+
+     <div class="container">
+            <div class="row">
+              <div class="page-header text-center img-rounded">
+              <h1>My Rec Team</h1>
+              <h2> Your Scheduling App for Sports Leagues</h2>
+             </div>
+          </div>
+          <div class="row landPage flex">
+            <div class="col-md-6 defaultOpacity img-rounded">
+                <h3>Toss the Paper and Phone. MyRecTeam Does It All</h3>
+                    <p>With My RecTeam, your department no longer needs paper, call-ins and phone chains to communicate with coaches and teams. Do it all on one easy-to-use interface. <br />
+                    Easily update the calendar to keep parents and coaches in the loop. And the weather app lets users see when conditions might cause a cancellation.
+                    </p>
+                <h3>Log In To Start </h3>  
+            </div>
+                    
+            <div class="col-md-6">
+                <div class="panel panel-default defaultOpacity img-rounded removeBottomMargin">
+                    <div class="panel-heading">
+                       <h3 class="panel-title">Login</h3>
+                    </div>
+                      <div class="panel-body defaultOpacity">
+                          <form class="form-horizontal">
+                              <div class="form-group">
+                                  <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                  <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                  </div>
+                                </div>
+                                  <div class="form-group">
+                                  <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                                  <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox"> Remember me
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">Sign in</button>
+                                  </div>
+                            </div>
+                            </form>
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel').carousel({interval: 5000});
+  });
+</script>
+</html>
