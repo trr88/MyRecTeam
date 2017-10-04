@@ -15,29 +15,34 @@ var eventsArray = [ {
             description: 'Champion Games'
         },{
             title: 'Fun to play Baseball game',
-            start: '2017-09-19T12:00:00+13:00'
+            start: '2017-09-19T12:00:00',
+            end: '2017-09-19T13:15:00'
 
         },{
             title: 'Play Sports',
-            start: '2017-09-19'
+            start: '2017-09-19',
+            end: '2017-09-20'
 
         },{
             title: 'Practice Soccers',
-            start: '2017-09-19T13:00:00+14:00',
-            end: '2017-09-19T14:00:00',
+            start: '2017-09-19T13:00:00',
+            end: '2017-09-19T14:30:00',
             description: 'This is a cool event'
 
         },{
             title: 'Teams Soccers Vs Teams Soccers',
-            start: '2017-09-19T16:00:00+18:00'
+            start: '2017-09-19T16:00:00',
+            end: '2017-09-19T18:15:00'
 
         },{
             title: 'Meetings ',
-            start: '2017-09-19T18:00:00+20:00'
+            start: '2017-09-19T18:00:00',
+            end: '2017-09-19T20:45:00'
 
         },{
             title: 'Practice Morning ',
-            start: '2017-09-19T09:00:00+11:00'
+            start: '2017-09-19T09:00:00',
+            end: '2017-09-19T11:30:00'
 
         }];
 
@@ -78,6 +83,7 @@ class Calendar extends React.Component {
                 </Modal.Body>
                 <Modal.Footer>
                     <Modal.Dismiss className="btn btn-default">Close</Modal.Dismiss>
+                    <Modal.Dismiss className="btn btn-primary">Delete</Modal.Dismiss>
                 </Modal.Footer>
             </Modal>
         </div>
