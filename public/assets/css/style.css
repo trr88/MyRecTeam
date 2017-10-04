@@ -1,8 +1,66 @@
 body {
 	font-family: 'Open Sans', sans-serif;
-	background-image: url(../images/crossword.png);
     font-size: 16px;
-    line-height: 150%;
+    line-height: 125%;
+}
+
+p {
+    font-size: 17px;
+}
+.carousel { z-index: -99; } /* keeps this behind all content */
+.carousel .item {
+    position: fixed; 
+    width: 100%; height: 100%;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+
+}
+.carousel .one {
+    background: url(../images/football-team-1638508_1920_2.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .two {
+    background: url(../images/soccerduel-2042593_1920_edited.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .three {
+    background: url(../images/teamequipment_edited.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .active.left {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+
+.dashPadding{
+    margin: 10px 0px 10px 0px;
+    
+}
+.page-header{
+    color: white;
+    background: rgba(277,114,34,1);
+    border:0px;
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.landPage{ 
+    font-size: 24px;
+    line-height: 125%;
+    font-weight: 500;
+    margin-top: 150px;
+
+}
+.dashPage{
+    font-size: 28px;
 }
 
 #landingPage {
@@ -10,10 +68,7 @@ body {
     background-repeat: no-repeat;
 
 }
-.landPage{
-    margin-top:  150px;
-    padding-top: 45px; 
-}
+
  .defaultOpacity{
     background: rgba(255,255,255, 0.75);
     color: black;
@@ -22,6 +77,12 @@ body {
     padding: 8px;
 }
 
+.flex{
+    display: flex;
+}
+.removeBottomMargin{
+    margin-bottom: 0px;
+}
 h1, h2, h3, h4 {
 	font-family: 'Droid Sans', sans-serif;
 }
@@ -126,4 +187,11 @@ a:link{
 	font-size: 16px;
 	padding: 25px 5px 25px 5px;
 
+}
+
+.btn-default {
+    color: white;
+    background-color: #303c6c;
+    border-color: #303c6c;
+    font-size: 17px;
 }
