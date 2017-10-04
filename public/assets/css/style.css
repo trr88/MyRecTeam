@@ -3,6 +3,10 @@ body {
     font-size: 16px;
     line-height: 125%;
 }
+
+p {
+    font-size: 17px;
+}
 .carousel { z-index: -99; } /* keeps this behind all content */
 .carousel .item {
     position: fixed; 
@@ -35,20 +39,29 @@ body {
     z-index:2;
 }
 
+.dashPadding{
+    margin: 10px 0px 10px 0px;
+    
+}
 .page-header{
     color: white;
-    background: rgba(277,114,34, 0.5);
+    background: rgba(277,114,34,1);
     border:0px;
     margin: 0px;
     padding-top: 5px;
     padding-bottom: 10px;
 }
 
-.landPage{
-    margin-top:  150px;
-    padding-top: 45px; 
-}
+.landPage{ 
+    font-size: 24px;
+    line-height: 125%;
+    font-weight: 500;
+    margin-top: 150px;
 
+}
+.dashPage{
+    font-size: 28px;
+}
 
 #landingPage {
 	background-image: url(../images/football-team-1638508_1920_2.jpg);  
@@ -174,4 +187,11 @@ a:link{
 	font-size: 16px;
 	padding: 25px 5px 25px 5px;
 
+}
+
+.btn-default {
+    color: white;
+    background-color: #303c6c;
+    border-color: #303c6c;
+    font-size: 17px;
 }
