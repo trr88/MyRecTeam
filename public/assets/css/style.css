@@ -4,7 +4,7 @@ body {
     line-height: 125%;
 }
 
-p {
+p,  {
     font-size: 17px;
 }
 .carousel { z-index: -99; } /* keeps this behind all content */
@@ -81,7 +81,10 @@ p {
     display: flex;
 }
 .removeBottomMargin{
+    margin-top: 0px;
     margin-bottom: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 h1, h2, h3, h4 {
 	font-family: 'Droid Sans', sans-serif;
