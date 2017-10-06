@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "1208Dawn!",
+    "password": "1215",
     "database": "myrecteam",
     "host": "127.0.0.1",
     "dialect": "mysql"

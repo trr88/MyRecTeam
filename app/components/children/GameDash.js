@@ -6,7 +6,8 @@ var GameForm = require("../children/grandchildren/GameForm");
 
 
 var GameDash = React.createClass({
-  render: function() {
+
+  render : function() {
     return (
 
       <div className="row defaultMargin">
@@ -29,6 +30,8 @@ var GameDash = React.createClass({
               </div>
               <div className="panel-body">
                 <p>Will eventually hold the weather api.</p>
+                {/*<iframe id="forecast_embed" type="text/html" frameBorder="0" height="245" width="100%">
+            </iframe>*/}
               </div>
             </div>
           </div>

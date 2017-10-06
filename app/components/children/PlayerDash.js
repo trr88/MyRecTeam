@@ -1,8 +1,37 @@
 var React = require("react");
 var Link = require("react-router").Link;
+import axios from 'axios';
+
 var PlayerForm = require("../children/grandchildren/PlayerForm");
 
 var PlayerDash = React.createClass({
+
+  getInitialState : function(){
+    return {
+      data: []   
+    };
+  },
+
+  componentDidMount : function (){
+    var _this = this;
+    axios.get('/players').then(function(response){
+      _this.setState({
+        data: response.data,
+      });
+    });
+  },
+
+  /*componentDidUpdate : function(){
+    var _this = this;
+    axios.get('/players').then(function(response){
+      _this.setState({
+        cols: _this.state.cols,
+        data: JSON.stringify(response.data)
+      });
+    });
+  },*/
+
+
   render: function() {
     return (
 
@@ -13,7 +42,12 @@ var PlayerDash = React.createClass({
               <h3 className="panel-title">Current Players</h3>
             </div>
             <div className="panel-body">
-              <p>Will eventually hold the player list.</p>
+              <p>list of players</p>
+              <div>
+                {this.state.data.map(function(player, i){
+                  return <p key={i}>{player.firstName}</p>
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -26,3 +60,4 @@ var PlayerDash = React.createClass({
 });
 
 module.exports = PlayerDash;
+

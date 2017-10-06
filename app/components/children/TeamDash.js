@@ -1,9 +1,26 @@
 var React = require("react");
 var Link = require("react-router").Link;
+import axios from 'axios';
 
 var TeamForm = require("../children/grandchildren/TeamForm");
 
 var TeamDash = React.createClass({
+
+  getInitialState : function(){
+    return {
+      data : []
+    };
+  },
+
+  componentDidMount : function (){
+    var _this = this;
+    axios.get('/teams').then(function(response){
+      _this.setState({
+        cols: _this.state.cols,
+        data: JSON.stringify(response.data)
+      });
+    });
+  },
 
   render: function() {
     return (
