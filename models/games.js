@@ -4,30 +4,30 @@ var Sequelize = require("sequelize");
 module.exports = function(sequelize, Sequelize) {
 	var Games = sequelize.define("Games", {
 		visitingTeam: {
-			type: Sequelize.INTEGER,
-			allowNull: false
+			type: Sequelize.STRING,
+			//allowNull: false
 		},
 		homeTeam: {
 			type: Sequelize.STRING,
-			allowNull: false
+			//allowNull: false
 		},
-		start: {
+		startTime: {
 			type: Sequelize.DATE,
-			allowNull: false,
-			isDate: true
+			// allowNull: false,
+			// isDate: true
 		},
-		end: {
+		endTime: {
 			type: Sequelize.DATE,
-			allowNull: false,
-			isDate: true
+			// allowNull: false,
+			// isDate: true
 		},
 		park: {
 			type: Sequelize.STRING,
-			notEmpty: true
+			// notEmpty: true
 		}
 	});
 	Games.associate = function(models) {
-		Games.hasMany(models.Teams);
+		Games.belongsTo(models.Teams);
 		Games.belongsTo(models.League);
 	}
 	return Games;

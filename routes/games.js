@@ -24,16 +24,15 @@ module.exports = function(app, db) {
     app.post('/games/new', (req, res) => {
         const visitingTeam = req.body.visitingTeam;
         const homeTeam = req.body.homeTeam;
-        const start = req.body.start;
-        const end = req.body.end;
-        const address = req.body.address;
-        const state = req.body.state;
-        const zipCode = req.body.zipCode;
+        const startTime = req.body.startTime;
+        const endTime = req.body.endTime;
+        const park = req.body.park;
+
         db.Games.create({
                 visitingTeam: visitingTeam,
                 homeTeam: homeTeam,
-                start: start,
-                end: end
+                startTime: startTime,
+                endTime: endTime
 
             })
             .then(newGames => {

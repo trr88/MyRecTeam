@@ -30,6 +30,7 @@ module.exports = function(sequelize, Sequelize){
 		}
 	});
 	Teams.associate = function(models) {
+		Teams.hasMany(models.Games);
 		Teams.belongsTo(models.League);
 		Teams.hasMany(models.Players);
 	};

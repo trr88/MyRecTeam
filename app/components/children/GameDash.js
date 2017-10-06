@@ -1,7 +1,7 @@
 var React = require("react");
 var Link = require("react-router").Link;
 var Calendar = require("../children/grandchildren/Calendar");
-var GameForm = require("../children/grandchildren/GameForm");
+var GamesForm = require("../children/grandchildren/GamesForm");
 /*var Weather = require("../children/grandchildren/Weather");*/
 
 
@@ -21,7 +21,7 @@ var GameDash = React.createClass({
           </div>
         </div>
         <div className="col-md-4">
-          <div className="row"><GameForm /></div>
+          <div className="row"><GamesForm /></div>
           <div className="row">
             <div className="panel panel-default">
               <div className="panel-heading">
