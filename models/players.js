@@ -26,7 +26,7 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.STRING,
 			allowNull: false,
 			validate: {
-				len: [10, 10]
+				/*len: [10, 10]*/
 			}
 		},
 		email: {
