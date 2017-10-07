@@ -1,6 +1,7 @@
 var React = require("react");
 var Link = require("react-router").Link;
 import axios from 'axios';
+import ReactTable from "react-table";
 
 var TeamForm = require("../children/grandchildren/TeamForm");
 
@@ -16,8 +17,7 @@ var TeamDash = React.createClass({
     var _this = this;
     axios.get('/teams').then(function(response){
       _this.setState({
-        cols: _this.state.cols,
-        data: JSON.stringify(response.data)
+        data: response.data,
       });
     });
   },
@@ -32,7 +32,30 @@ var TeamDash = React.createClass({
               <h3 className="panel-title">Current Teams</h3>
             </div>
             <div className="panel-body">
-              <p>Will eventually hold the team list.</p>
+              <ReactTable
+                data={this.state.data} 
+                columns={[
+                  {
+                    Header: "Team Name",
+                    accessor: "teamsName"
+                  },
+                  {
+                    Header: "Coach's First Name",
+                    accessor: "coachFirstName"
+                  },
+                  {
+                    Header: "Last Name",
+                    accessor: "coachLastName"
+                  },
+                  {
+                    Header: "Coach Contact",
+                    accessor: "coachPhone"
+                  }
+                ]} 
+                defaultPageSize={10} 
+                className="-striped -highlight" 
+                />
+                <br/>
             </div>
           </div>
         </div>

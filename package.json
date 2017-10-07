@@ -45,7 +45,9 @@
     "path": "^0.12.7",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-forecast": "0.0.7",
     "react-router": "^2.4.1",
+    "react-table": "^6.6.0",
     "sequelize": "^4.8.2",
     "sequelize-router": "^1.0.6",
     "serve-favicon": "^2.4.4"

@@ -14,6 +14,7 @@ var TeamForm = React.createClass({
     }
   },
 
+
   handleChange: function(e){
       var state = this.state
       state[e.target.id] = e.target.value;
