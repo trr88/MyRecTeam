@@ -14,12 +14,12 @@ module.exports = function(sequelize, Sequelize) {
 		startTime: {
 			type: Sequelize.DATE,
 			// allowNull: false,
-			// isDate: true
+			isDate: true
 		},
 		endTime: {
 			type: Sequelize.DATE,
 			// allowNull: false,
-			// isDate: true
+			isDate: true
 		},
 		park: {
 			type: Sequelize.STRING,
