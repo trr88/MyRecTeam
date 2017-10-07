@@ -5,47 +5,25 @@ var $ = require("jquery");
 var Moment = require("moment");
 
 var eventsArray = [ {
-            title: 'All Day Event',
-            start: '2017-09-08'
-        }, {
-            title: 'Long Event',
-            start: '2017-09-11',
-            end: '2017-09-16'
-        }, {
-            title: 'Click for Google',
-            url: 'http://google.com/',
-            start: '2017-09-19'
-
-        },{
-            title: 'Click for Sports',
-            url: 'http://espn.com/',
-            start: '2017-09-19'
-
-        },{
-            title: 'Fun to play Baseball game',
-            start: '2017-09-19T12:00:00+13:00'
-
-        },{
-            title: 'Play Sports',
-            start: '2017-09-19'
-
-        },{
-            title: 'Practice Soccers',
-            start: '2017-09-19T13:00:00+14:00'
-
-        },{
-            title: 'Teams Soccers Vs Teams Soccers',
-            start: '2017-09-19T16:00:00+18:00'
-
-        },{
-            title: 'Meetings ',
-            start: '2017-09-19T18:00:00+20:00'
-
-        },{
-            title: 'Practice Morning ',
-            start: '2017-09-19T09:00:00+11:00'
-
-        }];
+                        title: 'Game',
+                        start: '2017-10-08'
+                    }, 
+                    {
+                        title: 'Game',
+                        start: '2017-10-10'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-12'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-14'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-16'
+                    }];
 
 var Calendar = React.createClass({
 

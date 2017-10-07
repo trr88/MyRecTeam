@@ -2,11 +2,12 @@ var React = require("react");
 var Link = require("react-router").Link;
 var Calendar = require("../children/grandchildren/Calendar");
 var GameForm = require("../children/grandchildren/GameForm");
-/*var Weather = require("../children/grandchildren/Weather");*/
+var Weather = require("../children/grandchildren/Weather");
 
 
 var GameDash = React.createClass({
-  render: function() {
+
+  render : function() {
     return (
 
       <div className="row defaultMargin">
@@ -25,10 +26,10 @@ var GameDash = React.createClass({
           <div className="row">
             <div className="panel panel-default">
               <div className="panel-heading">
-                <h3 className="panel-title">Weather Panel</h3>
+                <h3 className="panel-title">Current Weather</h3>
               </div>
               <div className="panel-body">
-                <p>Will eventually hold the weather api.</p>
+                <Weather />
               </div>
             </div>
           </div>
@@ -40,3 +41,4 @@ var GameDash = React.createClass({
 });
 
 module.exports = GameDash;
+
