@@ -29,6 +29,18 @@ getInitialState: function(){
       endTime: this.state.end, 
       park: this.state.park
     });
+    this.setState({
+      visitingTeam: "",
+      homeTeam: "",
+      start: "",
+      end: "",
+      park: ""   
+    });
+      visitingTeam.value = "";
+      homeTeam.value = "";
+      start.value = "";
+      end.value = "";
+      park.value = ""
   },
 
 

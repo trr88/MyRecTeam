@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/users/new" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="name">E-mail:</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div>
+            <label for="name">Password:</label>
+            <input type="text" id="password" name="password">
+        </div>
+        <div class="button">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+    	var data = $('form').serialize();
+    	$.post('/users/new', data);
+    </script>
+</body>
+
+</html>

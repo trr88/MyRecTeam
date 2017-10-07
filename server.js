@@ -11,6 +11,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 var db = require("./models");
+var authRoute = require('./app/routes/auth.js')(app);
 
 app.use(morgan('dev'));
 app.use(cookieParser());
