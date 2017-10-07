@@ -50,7 +50,7 @@
     "react-table": "^6.6.0",
     "sequelize": "^4.8.2",
     "sequelize-router": "^1.0.6",
-    "serve-favicon": "^2.4.4"
+    "serve-favicon": "^2.4.4",
     "webpack": "^1.15.0"
   },
   "devDependencies": {
