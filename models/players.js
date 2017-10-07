@@ -15,7 +15,7 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.INTEGER,
 			allowNull: false,
 			validate: {
-				/*isInt: true*/
+				isInt: true
 			}
 		},
 		parentGuardian: {
@@ -23,17 +23,17 @@ module.exports = function(sequelize, Sequelize) {
 			notEmpty: true
 		},
 		phone: {
-			type: Sequelize.INTEGER,
+			type: Sequelize.STRING,
 			allowNull: false,
 			validate: {
-				/*len: [10, 10]*/
+				len: [10, 10]
 			}
 		},
 		email: {
 			type: Sequelize.STRING,
 			notEmpty: true,
 			validate: {
-				/*isEmail: true*/
+				isEmail: true
 			}
 		}
 	});
