@@ -1,14 +1,19 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": null,
-    "database": "database_development",
+    "password": "",
+=======
+    "password": "1215",
+>>>>>>> 98a40bedf609b611a48842f1217a8ee3c5634603
+    "database": "myrecteam",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"

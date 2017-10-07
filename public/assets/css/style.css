@@ -1,0 +1,212 @@
+.modal{display:block;}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 125%;
+}
+
+p,  {
+    font-size: 17px;
+}
+.panel {
+    border-radius: 0;
+}
+
+.carousel { z-index: -99; } /* keeps this behind all content */
+.carousel .item {
+    position: fixed; 
+    width: 100%; height: 100%;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+
+}
+.carousel .one {
+    background: url(../images/football-team-1638508_1920_2.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .two {
+    background: url(../images/soccerduel-2042593_1920_edited.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .three {
+    background: url(../images/teamequipment_edited.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .active.left {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+
+.dashPadding{
+    margin: 10px 0px 10px 0px;
+    
+}
+.page-header{
+    color: white;
+    background: rgba(277,114,34,1);
+    border:0px;
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.landPage{ 
+    font-size: 24px;
+    line-height: 125%;
+    font-weight: 500;
+    margin-top: 150px;
+
+}
+.dashPage{
+    font-size: 28px;
+}
+
+#landingPage {
+	background-image: url(../images/football-team-1638508_1920_2.jpg);  
+    background-repeat: no-repeat;
+
+}
+
+ .defaultOpacity{
+    background: rgba(255,255,255, 0.75);
+    color: black;
+ }
+.nav-stacked>li{
+    padding: 8px;
+}
+
+.flex{
+    display: flex;
+}
+.removeBottomMargin{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+h1, h2, h3, h4 {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.defaultShadow{
+     box-shadow: 5px 5px 5px  #D3D3D3;
+
+}
+
+form.horizontal{
+	
+}
+.navbar {
+	background-color: #e37222;
+}
+
+
+.navbar-default .navbar-brand {
+    color: #f7f7f7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #f7f7f7;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #f7f7f7;
+    background-color: #303c6c;
+   }
+
+.navbar-collapse{
+    margin: 10px 25px 10px 25px;
+}
+
+
+.mainContainer{
+    background-image: url(../images/crossword.png);
+}
+
+.panel-default {
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #303c6c;
+    border-color: #303c6c;
+}
+
+.panel-body{
+	background-color: white;
+}
+
+
+ label.col-sm-2.control-label{
+ 	font-size: 14px;
+ }
+.dashNav{
+    padding: 25px;
+}
+
+h3{
+	line-height: 130%;
+}
+
+h3.panel-title{
+	font-size: 20px;
+    color: #f7f7f7;
+}
+ 
+.nav>li>a:link {
+    color: white;
+    background-color: #303c6c;
+}
+
+.nav-head>li>a:link {
+    color: white;
+    background-color: #e37222;
+}
+
+.nav>li>a:active {
+    color: white;
+    background-color: #e37222;
+}
+.nav>li>a:visited {
+    color: white;
+    background-color: #7c7f8e;
+}
+
+
+a:link{
+	color: #303c6c;
+}
+
+.nav-pills>li>a {
+    border-radius: 0;
+}
+
+.defaultMargin{
+    margin: 5px 5px;
+}
+.nav-stacked {
+	height: 850px;
+    color: black;
+	background-color: white;
+	font-size: 16px;
+	padding: 25px 5px 25px 5px;
+
+}
+
+.btn-default {
+    color: white;
+    background-color: #303c6c;
+    border-color: #303c6c;
+    font-size: 17px;
+}

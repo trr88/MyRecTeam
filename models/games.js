@@ -1,0 +1,34 @@
+'use strict';
+var Sequelize = require("sequelize");
+
+module.exports = function(sequelize, Sequelize) {
+	var Games = sequelize.define("Games", {
+		visitingTeam: {
+			type: Sequelize.INTEGER,
+			allowNull: false
+		},
+		homeTeam: {
+			type: Sequelize.STRING,
+			allowNull: false
+		},
+		start: {
+			type: Sequelize.DATE,
+			allowNull: false,
+			isDate: true
+		},
+		end: {
+			type: Sequelize.DATE,
+			allowNull: false,
+			isDate: true
+		},
+		park: {
+			type: Sequelize.STRING,
+			notEmpty: true
+		}
+	});
+	Games.associate = function(models) {
+		Games.hasMany(models.Teams);
+		Games.belongsTo(models.League);
+	}
+	return Games;
+}
