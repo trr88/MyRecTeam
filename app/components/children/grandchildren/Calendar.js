@@ -6,67 +6,25 @@ var Modal = require("react-bootstrap-modal");
 var Moment = require("moment");
 
 var eventsArray = [ {
-<<<<<<< HEAD
-            title: 'All Day Event',
-            start: '2017-09-08' 
-        }, {
-            title: 'Long Event',
-            start: '2017-09-11',
-            end: '2017-09-19',
-            description: 'Champion Games'
-        },{
-            title: 'Fun to play Baseball game',
-            start: '2017-09-19T12:00:00',
-            end: '2017-09-19T13:15:00'
-
-        },{
-            title: 'Play Sports',
-            start: '2017-09-19',
-            end: '2017-09-20'
-
-        },{
-            title: 'Practice Soccers',
-            start: '2017-09-19T13:00:00',
-            end: '2017-09-19T14:30:00',
-            description: 'This is a cool event'
-
-        },{
-            title: 'Teams Soccers Vs Teams Soccers',
-            start: '2017-09-19T16:00:00',
-            end: '2017-09-19T18:15:00'
-
-        },{
-            title: 'Meetings ',
-            start: '2017-09-19T18:00:00',
-            end: '2017-09-19T20:45:00'
-
-        },{
-            title: 'Practice Morning ',
-            start: '2017-09-19T09:00:00',
-            end: '2017-09-19T11:30:00'
-
-        }];
-=======
-                        title: 'Game',
-                        start: '2017-10-08'
-                    }, 
-                    {
-                        title: 'Game',
-                        start: '2017-10-10'
-                    },
-                    {
-                        title: 'Game',
-                        start: '2017-10-12'
-                    },
-                    {
-                        title: 'Game',
-                        start: '2017-10-14'
-                    },
-                    {
-                        title: 'Game',
-                        start: '2017-10-16'
-                    }];
->>>>>>> 98a40bedf609b611a48842f1217a8ee3c5634603
+        title: 'Game',
+        start: '2017-10-08'
+    }, 
+    {
+        title: 'Game',
+        start: '2017-10-10'
+    },
+    {
+        title: 'Game',
+        start: '2017-10-12'
+    },
+    {
+        title: 'Game',
+        start: '2017-10-14'
+    },
+    {
+        title: 'Game',
+        start: '2017-10-16'
+    }];
 
 class Calendar extends React.Component {
   constructor(props) {
