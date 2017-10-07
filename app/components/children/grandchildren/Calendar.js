@@ -6,6 +6,7 @@ var Modal = require("react-bootstrap-modal");
 var Moment = require("moment");
 
 var eventsArray = [ {
+<<<<<<< HEAD
             title: 'All Day Event',
             start: '2017-09-08' 
         }, {
@@ -45,6 +46,27 @@ var eventsArray = [ {
             end: '2017-09-19T11:30:00'
 
         }];
+=======
+                        title: 'Game',
+                        start: '2017-10-08'
+                    }, 
+                    {
+                        title: 'Game',
+                        start: '2017-10-10'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-12'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-14'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-16'
+                    }];
+>>>>>>> 98a40bedf609b611a48842f1217a8ee3c5634603
 
 class Calendar extends React.Component {
   constructor(props) {

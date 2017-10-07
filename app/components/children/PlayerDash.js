@@ -1,8 +1,27 @@
 var React = require("react");
 var Link = require("react-router").Link;
+import axios from 'axios';
+import ReactTable from "react-table";
+
 var PlayerForm = require("../children/grandchildren/PlayerForm");
 
 var PlayerDash = React.createClass({
+
+  getInitialState : function(){
+    return {
+      data: []   
+    };
+  },
+
+  componentDidMount : function (){
+    var _this = this;
+    axios.get('/players').then(function(response){
+      _this.setState({
+        data: response.data,
+      });
+    });
+  },
+
   render: function() {
     return (
 
@@ -13,7 +32,26 @@ var PlayerDash = React.createClass({
               <h3 className="panel-title">Current Players</h3>
             </div>
             <div className="panel-body">
-              <p>Will eventually hold the player list.</p>
+              <ReactTable
+                data={this.state.data} 
+                columns={[
+                  {
+                    Header: "First Name",
+                    accessor: "firstName"
+                  },
+                  {
+                    Header: "Last Name",
+                    accessor: "lastName"
+                  },
+                  {
+                    Header: "Contact",
+                    accessor: "phone"
+                  }
+                ]} 
+                defaultPageSize={10} 
+                className="-striped -highlight" 
+                />
+                <br/>
             </div>
           </div>
         </div>
@@ -26,3 +64,4 @@ var PlayerDash = React.createClass({
 });
 
 module.exports = PlayerDash;
+

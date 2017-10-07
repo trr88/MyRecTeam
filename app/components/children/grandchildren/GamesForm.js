@@ -2,8 +2,9 @@ var React = require("react");
 var Link = require("react-router").Link;
 import axios from 'axios';
 
-var GameForm = React.createClass({
-  getInitialState: function(){
+var GamesForm = React.createClass({
+
+getInitialState: function(){
     return {
       visitingTeam: "",
       homeTeam: "",
@@ -65,4 +66,4 @@ var GameForm = React.createClass({
   }
 });
 
-module.exports = GameForm;
+module.exports = GamesForm;

@@ -9,6 +9,10 @@ body {
 p,  {
     font-size: 17px;
 }
+.panel {
+    border-radius: 0;
+}
+
 .carousel { z-index: -99; } /* keeps this behind all content */
 .carousel .item {
     position: fixed; 
@@ -164,6 +168,12 @@ h3.panel-title{
     color: white;
     background-color: #303c6c;
 }
+
+.nav-head>li>a:link {
+    color: white;
+    background-color: #e37222;
+}
+
 .nav>li>a:active {
     color: white;
     background-color: #e37222;
