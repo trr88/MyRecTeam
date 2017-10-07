@@ -43,13 +43,11 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-<<<<<<< HEAD
     "react": "^0.14.9",
     "react-bootstrap-modal": "^3.0.1",
     "react-dom": "^0.14.9",
     "react-router": "^2.8.1",
     "sequelize": "^4.10.2",
-=======
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-forecast": "0.0.7",
@@ -57,7 +55,6 @@
     "react-table": "^6.6.0",
     "sequelize": "^4.8.2",
     "sequelize-router": "^1.0.6",
->>>>>>> 98a40bedf609b611a48842f1217a8ee3c5634603
     "serve-favicon": "^2.4.4",
     "webpack": "^1.15.0"
   },
