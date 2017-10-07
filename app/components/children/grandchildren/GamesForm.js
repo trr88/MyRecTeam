@@ -29,6 +29,7 @@ getInitialState: function(){
       endTime: this.state.end, 
       park: this.state.park
     });
+<<<<<<< HEAD
     this.setState({
       visitingTeam: "",
       homeTeam: "",
@@ -41,6 +42,8 @@ getInitialState: function(){
       start.value = "";
       end.value = "";
       park.value = ""
+=======
+>>>>>>> ec34d82023498963fa7bae2def1a0075c99ff43d
   },
 
 
@@ -67,6 +70,10 @@ getInitialState: function(){
 
               <label className="">Park and Field</label>
               <input type="text" className="form-control text-center" id="park" value={this.state.value} onChange= {this.handleChange} required/>
+<<<<<<< HEAD
+=======
+              <br/>
+>>>>>>> ec34d82023498963fa7bae2def1a0075c99ff43d
               
               <button type="button" className="btn btn-primary" onClick={this.handleClick}>Submit</button>
             </div>

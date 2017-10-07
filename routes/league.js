@@ -34,7 +34,11 @@ module.exports = function(app, db) {
         .then(newLeague => {
             res.json(newLeague);
         })
+<<<<<<< HEAD
         // .catch(err => throw err)
+=======
+        /*.catch(err => throw err)*/
+>>>>>>> ec34d82023498963fa7bae2def1a0075c99ff43d
     });
 
     // PATCH single league

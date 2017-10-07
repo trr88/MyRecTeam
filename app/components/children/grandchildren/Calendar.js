@@ -5,6 +5,7 @@ var $ = require("jquery");
 var Moment = require("moment");
 import axios from 'axios';
 
+<<<<<<< HEAD
 // var eventsArray = [];
 
 var Calendar = React.createClass({
@@ -17,6 +18,28 @@ var Calendar = React.createClass({
     },
 
   componentDidMount: function(){
+=======
+var eventsArray = [ {
+                        title: 'Game',
+                        start: '2017-10-08'
+                    }, 
+                    {
+                        title: 'Game',
+                        start: '2017-10-10'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-12'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-14'
+                    },
+                    {
+                        title: 'Game',
+                        start: '2017-10-16'
+                    }];
+>>>>>>> ec34d82023498963fa7bae2def1a0075c99ff43d
 
         var _this = this;
         axios.get('/games').then(function(response){

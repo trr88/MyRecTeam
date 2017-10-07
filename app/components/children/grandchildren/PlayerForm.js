@@ -31,6 +31,23 @@ getInitialState: function(){
       phone: this.state.phone, 
       email: this.state.email
     });
+<<<<<<< HEAD
+=======
+    this.setState({
+      firstName: "",
+      lastName: "",
+      age: "",
+      parentGuardian: "",
+      phone: "",
+      email: ""
+    });
+    firstName.value = "";
+    lastName.value = "";
+    age.value = "";
+    parentGuardian.value = "";
+    phone.value = "";
+    email.value = "";
+>>>>>>> ec34d82023498963fa7bae2def1a0075c99ff43d
   },
 
 
