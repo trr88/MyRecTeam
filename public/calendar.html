@@ -13,28 +13,37 @@
 <body>
 
 <div id="calendar"></div>
-
+<div id="fullCalModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+                <h4 id="modalTitle" class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                    <div class="row">
+                    <div id="modalBody" class="col-md-4"><div class="modal-body"></div></div>
+                    <div id="modalStart" class="col-md-4 col-md-offset-4"></div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
 
 
 $(document).ready(function() {
 		var eventsArray = [ {
             title: 'All Day Event',
-            start: '2017-09-08'
+            start: '2017-09-08' 
         }, {
             title: 'Long Event',
             start: '2017-09-11',
-            end: '2017-09-19'
-        }, {
-            title: 'Click for Google',
-            url: 'http://google.com/',
-            start: '2017-09-19'
-
-        },{
-            title: 'Click for Sports',
-            url: 'http://espn.com/',
-            start: '2017-09-19'
-
+            end: '2017-09-19',
+            description: 'Champion Games'
         },{
             title: 'Fun to play Baseball game',
             start: '2017-09-19T12:00:00+13:00'
@@ -45,7 +54,8 @@ $(document).ready(function() {
 
         },{
             title: 'Practice Soccers',
-            start: '2017-09-19T13:00:00+14:00'
+            start: '2017-09-19T13:00:00+14:00',
+            description: 'This is a cool event'
 
         },{
             title: 'Teams Soccers Vs Teams Soccers',
@@ -76,8 +86,14 @@ $(document).ready(function() {
             }
         },
         editable: true,
-		eventColor: '#303c6c',        
-
+		eventColor: '#303c6c',
+        eventClick: function(event, jsEvent, view) {
+         $('#modalTitle').html(event.title);
+         $('#modalBody').html(event.description);
+         $("#modalStart").html(moment(event.start).format('MMM Do h:mm A'));
+         $("#modalEnd").html(moment(event.end).format('MMM Do h:mm A'));
+         $('#fullCalModal').modal();
+        }
     });
 });
 

@@ -1,37 +1,79 @@
 var React = require("react");
 var Link = require("react-router").Link;
 var FullCalendar = require("fullcalendar");
-var $ = require("jquery");
+var jQuery = require("jquery");
+var Modal = require("react-bootstrap-modal");
 var Moment = require("moment");
 
 var eventsArray = [ {
-                        title: 'Game',
-                        start: '2017-10-08'
-                    }, 
-                    {
-                        title: 'Game',
-                        start: '2017-10-10'
-                    },
-                    {
-                        title: 'Game',
-                        start: '2017-10-12'
-                    },
-                    {
-                        title: 'Game',
-                        start: '2017-10-14'
-                    },
-                    {
-                        title: 'Game',
-                        start: '2017-10-16'
-                    }];
+        title: 'Game',
+        start: '2017-10-08'
+    }, 
+    {
+        title: 'Game',
+        start: '2017-10-10'
+    },
+    {
+        title: 'Game',
+        start: '2017-10-12'
+    },
+    {
+        title: 'Game',
+        start: '2017-10-14'
+    },
+    {
+        title: 'Game',
+        start: '2017-10-16'
+    }];
 
-var Calendar = React.createClass({
+class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
 
   render() {
-    return <div id="calendar"></div>;
-  },
+    let closeModal = () => this.setState({ open: false });
+
+    let saveAndClose = () => {
+      api.saveData().then(() => this.setState({ open: false }));
+    };
+
+    return ( 
+        <div>
+            <div id="calendar"></div>        
+            <Modal
+                show={this.state.open}
+                onHide={closeModal}
+                aria-labelledby="modalTitle"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="modalTitle">A Title Goes here</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div className="row">
+                        <div id="modalBody" className="col-md-9">
+                            <div className="modal-body"></div>
+                        </div>
+                        <div className="row">
+                            <div id="modalStart" className="col-md-4"></div>
+                            <div id="modalEnd" className="col-md-4"></div>
+                        </div>
+                    </div>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Modal.Dismiss className="btn btn-default">Close</Modal.Dismiss>
+                    <Modal.Dismiss className="btn btn-primary">Delete</Modal.Dismiss>
+                </Modal.Footer>
+            </Modal>
+        </div>
+    );
+  }
+
   componentDidMount() {
-    $('#calendar').fullCalendar({
+    var that = this;
+
+    jQuery('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
 				center: 'title',
@@ -46,10 +88,17 @@ var Calendar = React.createClass({
         },
         editable: false,
 		eventColor: '#303c6c',
-			
+        eventClick: function(event, jsEvent, view) {
+            that.setState({open:true});
+            jQuery('#modalTitle').html(event.title);
+            jQuery('#modalBody').html(event.description);
+            jQuery("#modalStart").html(moment(event.start).format('MMM Do h:mm A'));
+            jQuery("#modalEnd").html(moment(event.end).format('MMM Do h:mm A'));
+        }
     })
   }
-});
+};
 
 module.exports = Calendar;
+
 
