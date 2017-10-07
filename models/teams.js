@@ -19,7 +19,7 @@ module.exports = function(sequelize, Sequelize){
 			len: [1]
 		},
 		coachPhone: {
-			type: Sequelize.INTEGER,
+			type: Sequelize.STRING,
 			allowNull: false,
 			len: [10, 10]
 		},
